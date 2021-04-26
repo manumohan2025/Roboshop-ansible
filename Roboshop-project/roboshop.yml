@@ -1,0 +1,27 @@
+-name: setup roboshop project
+-host: all
+ tasks :
+    -name: load cart
+      import_role:
+       name: cart
+    when: component == "cart"
+    -name: load catalogue
+      import_role:
+       name: catalouge
+    when: component == "catalouge"
+    -name: load frontend
+     import_role:
+      name: frontend
+    when: component == "frontend"
+     -name: load payment
+      import_role:
+       name: payment
+     when: component == "payment"
+     -name: load shipping
+      import_role:
+       name: shipping
+     when: component == "shipping"
+     -name: load user
+      import_role:
+       name: user
+     when: component == "user"
