@@ -1,5 +1,7 @@
 -name: setup roboshop project
 -host: all
+become: yes
+#become used for sudo in CLI
  tasks :
     -name: load cart
       import_role:
